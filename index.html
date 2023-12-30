@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="description" content="Soluciones Tecnológicas es una empresa dedicada al desarrollo de todo tipo software a la medida.">
+    <meta property="og:title" content="Desarrollo de Sosftware a la medida">
+    <meta property="og:description" content="Nos dedicamos al desarrollo de software a la medida"> 
+    <meta property="og:image" content="./src/SOL_transparent.png">
+    <meta property="og:url" content="https://soltec.mx">
+    <meta property="og:type" content="website">
+    <title>Desarrollo de Software - Soluciones Tecnológicas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">
+      <img class="logo" src="./src/SOL_transparent.png" alt="Logo Empresa Soltec">
+      </a>
+      <h1 class="titulo">Soluciones Tecnológicas</h1>
+    </div>
+    <button aria-role="Botón para abrir menú" aria-label="Abrir Menú" id="abrir" class="abrir__menu"><i class="bi bi-list"></i></button>
+    <nav class="nav" id="nav">
+      <button aria-role="Botón para cerrar menu" aria-label="Cerrar Menú" class="cerrar__menu" id="cerrar"><i class="bi bi-x"></i></button>
+      <ul class="nav-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes_somos.html">Quiénes somos</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="section__left sp10">
+      <article>
+        <h2 class="subtitulo">Innovando el desarrollo de software.</h2>
+        <p class="parrafo">En <em>soltec</em> nos destacamos por estar a la vanguardia 
+        de las últimas tecnologías y tendencias en el desarrollo de software. </br></br>
+        Innovamos constantemente en el diseño y la usabilidad para garantizar que cada solución 
+        que desarrollamos no solo sea tecnológicamente avanzada, sino también intuitiva 
+        y satisfactoria para los usuarios. </br></br>
+        En un mundo donde la agilidad es clave, nuestras metodologías de desarrollo de software 
+        son ágiles y flexibles. Adoptamos enfoques modernos que permiten entregas rápidas 
+        y adaptaciones continuas.</p></br>
+        <button id="btnContacto" class="btnContacto">Contáctanos</button>
+      </article>
+      <aside>
+        <div class="widget">
+          <img class="imagen" src="./src/pantalla-con-codigo.jpg" alt="Desarrollo de Software">
+        </div>
+      </aside>
+    </section>
+    <div class="s-bar">
+      <h3>Nuestra misión: ¡Convertir satisfactoriamente requerimientos en software!</h3>
+    </div>
+    <div class="s-bar">
+      <img class="coding" src="./src/code-solid.svg" alt="Coding"></img>
+      <h4>¡Siempre a la vanguardia en arquitecturas de desarrollo!</h4>
+    </div>  
+    <section class="section__right">
+      <aside>
+        <div class="widget">
+          <img class="imagen" src="./src/laptop-codigo.jpg" alt="Desarrollo de Software">
+        </div>
+      </aside>
+      <article>
+        <h2 class="subtitulo">Soluciones diseñadas para superar tus expectativas.</h2>
+        <p class="parrafo">En <em>soltec</em> nuestra filosofía se basa en la creencia de 
+          que cada cliente es único, y por lo tanto, nuestras soluciones están meticulosamente 
+          diseñadas para superar tus expectativas en cada nivel. </br></br>
+          No se trata solo de cumplir con tus requisitos; se trata de anticiparnos a tus 
+          necesidades y ofrecerte experiencias que te sorprendan. </br></br>
+          La calidad es la piedra angular de todo lo que hacemos. 
+          Cada solución pasa por rigurosos estándares de calidad para garantizar 
+          que no solo cumple, sino que supera las expectativas. 
+          Nos esforzamos por la excelencia en todos los aspectos, desde la construcción 
+          hasta la entrega y el soporte postventa.</p></br>
+        <button id="btnContacto" class="btnContacto">Contáctanos</button>
+      </article>
+    </section>
+    <div class="s-bar">
+      <h3>¡Nos preocupamos por tu satisfacción!</h3>
+    </div>
+    <div class="s-bar">
+      <img class="coding" src="./src/eye-regular.svg" alt="Coding"></img>
+      <h4>¡Soporte técnico y asesoría en todo momento!</h4>
+    </div>  
+    <section class="section__left">
+      <article>
+        <h2 class="subtitulo">Desarrollamos tecnología para impulsar tu negocio.</h2>
+        <p class="parrafo">En <em>soltec</em> estamos comprometidos a ser tu socio tecnológico
+        estratégico, impulsando tu negocio hacia el éxito.</br></br>
+        Creemos en la fuerza de la colaboración. Trabajamos codo a codo contigo para comprender 
+        tus desafíos y oportunidades, integrando tus conocimientos empresariales con nuestra 
+        experiencia tecnológica.</br></br>
+        Esta colaboración guía nuestra innovación, asegurando que cada solución sea una respuesta
+        directa a tus necesidades y metas comerciales.</p></br>
+        <button id="btnContacto" class="btnContacto">Contáctanos</button>
+      </article>
+      <aside>
+        <div class="widget">
+          <img class="imagen" src="./src/pantalla-codigo-inspector.jpg" alt="Desarrollo de Software">
+        </div>
+      </aside>
+    </section>
+    <div class="s-bar">
+      <h3>¡Tu socio en la revolución digital!</h3>
+    </div>  
+    <section id="contacto">
+      <div class="contact__content" id="contact-content">
+        <h4 class="contact__title">¡Contáctanos!</h4>
+        <form aria-label="Formulario para enviar solicitar información" id="form" class="form" action="https://formspree.io/f/xyyrgeyo" method="post">
+          <label for="fname">Nombre Completo:</label>
+          <input class ="name" type="text" id="fname" required placeholder="Nombre Completo" type="text">
+          <label for="email">Correo Electónico</label>
+          <input class="email" type="email" id="email" required placeholder="Correo Electrónico" type="text">
+          <label for="message">Mensaje:</label>
+          <textarea class="message" id="message" name="message" rows="10" cols="50" placeholder="Escriba su mensaje..."></textarea>
+          <input aria-label="Enviar Información del Formulario" class="enviar" type="submit" value="Enviar">
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="pie__pagina">
+    <div class="grupo1">
+      <div class="box">
+        <figure>
+          <a href="#">
+            <img src="./src/SOL_transparent.png" alt="Logo Empresa Soltec">
+          </a>
+        </figure>
+        </div>
+        <div class="box">
+          <h2>Empresa</h2>
+          <a href="index.html">
+            <p>Inicio</p>
+          </a>
+          <a href="quienes_somos.html">
+            <p>Quiénes Somos</p>
+          </a>
+          <a href="#">
+            <p>Servicios</p>
+          </a>
+          <a href="#contacto">
+            <p>Contacto</p>
+          </a>
+        </div>
+        <div class="box">
+          <h2>Contacto</h2>
+          <p>hola@soltec.mx</p>
+          <p>0123456789</p>
+        </div>
+    </div>
+    <div class="grupo2">
+        <small>&copy; 2023 <b>Soluciones Tecnológicas</b> - Todos los Derechos Reservados.</small>
+    </div>
+  </footer>
+</body>
+</html>
