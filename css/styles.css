@@ -85,7 +85,7 @@ header {
   text-align: center;
 }
 .section__qs .parrafo {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: justify;
   padding-left: 1.5rem;
 }
@@ -156,13 +156,6 @@ header {
   border-radius: 15px;
   font-size: 1rem;
 }
-
-.section__right .btnContacto {
-  margin: 1rem 1rem 1rem 5.5rem;
-  padding: 1rem;
- 
-}
-
 .section__left .btnContacto:hover,
 .section__right .btnContacto:hover {
   background-color: #72caf3;
@@ -177,14 +170,8 @@ header {
   justify-items: left;
 }
 .section__right .subtitulo {
-  padding-left:10rem;
+  margin-right: 10rem;
 }
-
-.section__right .parrafo {
-  padding-left: 5rem;
-  padding-right: 2rem;
-}
-
 .section__right aside {
   padding-left: 4rem;
 }
