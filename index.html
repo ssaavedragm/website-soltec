@@ -4,16 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name ="description" content="Soluciones Tecnológicas es una empresa dedicada al desarrollo de todo tipo software a la medida.">
-    <meta property="og:title" content="Desarrollo de Sosftware a la medida">
-    <meta property="og:description" content="Nos dedicamos al desarrollo de software a la medida"> 
+    <meta name="description" content="Desarrollo de software a la medida en México. Más de 25 años de experiencia en soluciones tecnológicas para empresas: sistemas financieros, inteligencia artificial y más.">
+    <meta property="og:title" content="Desarrollo de Software a la Medida - Soluciones Tecnológicas">
+    <meta property="og:description" content="Desarrollo de software a la medida en México. Más de 25 años de experiencia en soluciones tecnológicas para empresas.">
     <meta property="og:image" content="./src/SOL_transparent.png">
     <meta property="og:url" content="https://soltec.mx">
     <meta property="og:type" content="website">
     <title>Desarrollo de Software - Soluciones Tecnológicas</title>
+    <link rel="canonical" href="https://soltec.mx/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Desarrollo de Software a la Medida - Soluciones Tecnológicas">
+    <meta name="twitter:description" content="Desarrollo de software a la medida en México. Más de 25 años de experiencia en soluciones tecnológicas para empresas.">
+    <meta name="twitter:image" content="https://soltec.mx/src/SOL_transparent.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/main.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Soluciones Tecnológicas",
+      "alternateName": "Soltec",
+      "url": "https://soltec.mx",
+      "logo": "https://soltec.mx/src/SOL_transparent.png",
+      "description": "Empresa mexicana especializada en desarrollo de software a la medida con más de 25 años de experiencia en sectores financieros y empresariales.",
+      "email": "hola@soltec.mx",
+      "telephone": "+52-55-43-60-41-40",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MX"
+      },
+      "sameAs": [],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+52-55-43-60-41-40",
+        "contactType": "customer service",
+        "email": "hola@soltec.mx",
+        "availableLanguage": "Spanish"
+      },
+      "knowsAbout": [
+        "Desarrollo de software a la medida",
+        "Inteligencia artificial",
+        "Blockchain",
+        "Sistemas financieros",
+        "Arquitectura de software"
+      ]
+    }
+    </script>
 </head>
 <body>
   <header>
@@ -23,88 +60,224 @@
       </a>
       <h1 class="titulo">Soluciones Tecnológicas</h1>
     </div>
-    <button aria-role="Botón para abrir menú" aria-label="Abrir Menú" id="abrir" class="abrir__menu"><i class="bi bi-list"></i></button>
+    <button aria-label="Abrir Menú" id="abrir" class="abrir__menu"><i class="bi bi-list" aria-hidden="true"></i></button>
     <nav class="nav" id="nav">
-      <button aria-role="Botón para cerrar menu" aria-label="Cerrar Menú" class="cerrar__menu" id="cerrar"><i class="bi bi-x"></i></button>
+      <button aria-label="Cerrar Menú" class="cerrar__menu" id="cerrar"><i class="bi bi-x" aria-hidden="true"></i></button>
       <ul class="nav-list">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="quienes_somos.html">Quiénes somos</a></li>
-        <li><a href="#">Servicios</a></li>
+        <li><a href="#servicios">Servicios</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__content">
+      <span class="hero__eyebrow">Software a la medida · IA · México</span>
+      <h2 class="hero__titulo">Transformamos tus ideas en <span>soluciones digitales</span></h2>
+      <p class="hero__subtitulo">Más de 25 años desarrollando software de alto impacto con <strong>Inteligencia Artificial</strong>, blockchain y tecnologías de punta para empresas financieras, industriales y comerciales.</p>
+      <div class="hero__cta">
+        <a href="#contacto" class="btn-primario">Solicitar información</a>
+        <a href="quienes_somos.html" class="btn-secundario">Conocer más</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stats__grid">
+      <div class="stats__item revelar delay-1">
+        <span class="stats__numero" data-target="25">0</span>
+        <span class="stats__label">Años de experiencia</span>
+      </div>
+      <div class="stats__item revelar delay-2">
+        <span class="stats__numero" data-target="150">0</span>
+        <span class="stats__label">Proyectos entregados</span>
+      </div>
+      <div class="stats__item revelar delay-3">
+        <span class="stats__numero" data-target="10">0</span>
+        <span class="stats__label">Sectores atendidos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Especialidades -->
+  <section class="especialidades" id="especialidades">
+    <div class="especialidades__encabezado revelar">
+      <h2 class="especialidades__titulo">Nuestras especialidades</h2>
+      <p class="especialidades__desc">Combinamos experiencia de industria con las tecnologías más avanzadas del mercado.</p>
+    </div>
+    <div class="especialidades__grid">
+      <div class="esp-card revelar delay-1">
+        <div class="esp-card__icono">
+          <i class="bi bi-robot"></i>
+        </div>
+        <h3 class="esp-card__titulo">Inteligencia Artificial</h3>
+        <p class="esp-card__texto">Modelos predictivos, procesamiento de lenguaje natural y automatización inteligente integrados en tus sistemas.</p>
+      </div>
+      <div class="esp-card revelar delay-2">
+        <div class="esp-card__icono">
+          <i class="bi bi-graph-up-arrow"></i>
+        </div>
+        <h3 class="esp-card__titulo">Sistemas Financieros</h3>
+        <p class="esp-card__texto">Más de 25 años en el mercado bursátil y financiero mexicano. Plataformas robustas y reguladas.</p>
+      </div>
+      <div class="esp-card revelar delay-3">
+        <div class="esp-card__icono">
+          <i class="bi bi-link-45deg"></i>
+        </div>
+        <h3 class="esp-card__titulo">Blockchain</h3>
+        <p class="esp-card__texto">Contratos inteligentes, trazabilidad de activos y soluciones descentralizadas para procesos críticos.</p>
+      </div>
+      <div class="esp-card revelar delay-1">
+        <div class="esp-card__icono">
+          <i class="bi bi-cloud-arrow-up"></i>
+        </div>
+        <h3 class="esp-card__titulo">Cloud & DevOps</h3>
+        <p class="esp-card__texto">Arquitecturas escalables en la nube con pipelines de entrega continua y alta disponibilidad.</p>
+      </div>
+      <div class="esp-card revelar delay-2">
+        <div class="esp-card__icono">
+          <i class="bi bi-code-slash"></i>
+        </div>
+        <h3 class="esp-card__titulo">Desarrollo a la medida</h3>
+        <p class="esp-card__texto">Software empresarial diseñado desde cero para ajustarse exactamente a tus procesos y flujos de trabajo.</p>
+      </div>
+      <div class="esp-card revelar delay-3">
+        <div class="esp-card__icono">
+          <i class="bi bi-headset"></i>
+        </div>
+        <h3 class="esp-card__titulo">Soporte & Consultoría</h3>
+        <p class="esp-card__texto">Acompañamiento técnico continuo, asesoría estratégica y soporte especializado en todo momento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="servicios" id="servicios">
+    <div class="servicios__encabezado revelar">
+      <h2 class="servicios__titulo">¿Qué podemos hacer por ti?</h2>
+      <p class="servicios__desc">Soluciones concretas para los retos tecnológicos de tu empresa.</p>
+    </div>
+    <div class="servicios__grid">
+
+      <div class="srv-card revelar delay-1">
+        <span class="srv-card__numero">01</span>
+        <div class="srv-card__icono"><i class="bi bi-laptop-fill"></i></div>
+        <h3 class="srv-card__titulo">Desarrollo de software a la medida</h3>
+        <p class="srv-card__texto">Diseñamos y construimos sistemas empresariales desde cero, ajustados exactamente a tus procesos, sin soluciones genéricas que no encajan.</p>
+        <ul class="srv-card__lista">
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Análisis de requerimientos</li>
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Diseño de arquitectura</li>
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Desarrollo ágil por sprints</li>
+        </ul>
+      </div>
+
+      <div class="srv-card revelar delay-2">
+        <span class="srv-card__numero">02</span>
+        <div class="srv-card__icono"><i class="bi bi-robot"></i></div>
+        <h3 class="srv-card__titulo">Integración de Inteligencia Artificial</h3>
+        <p class="srv-card__texto">Incorporamos IA en tus sistemas actuales: automatización de procesos, análisis predictivo y modelos de lenguaje adaptados a tu industria.</p>
+        <ul class="srv-card__lista">
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Modelos predictivos</li>
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Procesamiento de lenguaje natural</li>
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Automatización inteligente</li>
+        </ul>
+      </div>
+
+      <div class="srv-card revelar delay-3">
+        <span class="srv-card__numero">03</span>
+        <div class="srv-card__icono"><i class="bi bi-diagram-3-fill"></i></div>
+        <h3 class="srv-card__titulo">Consultoría y arquitectura tecnológica</h3>
+        <p class="srv-card__texto">Evaluamos tu infraestructura actual y diseñamos la hoja de ruta tecnológica más eficiente para alcanzar tus objetivos de negocio.</p>
+        <ul class="srv-card__lista">
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Auditoría tecnológica</li>
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Diseño de soluciones</li>
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Estrategia de transformación digital</li>
+        </ul>
+      </div>
+
+      <div class="srv-card revelar delay-1">
+        <span class="srv-card__numero">04</span>
+        <div class="srv-card__icono"><i class="bi bi-arrow-repeat"></i></div>
+        <h3 class="srv-card__titulo">Migración y modernización de sistemas</h3>
+        <p class="srv-card__texto">Migramos sistemas legacy a tecnologías modernas sin interrumpir tus operaciones, asegurando continuidad y mejora del rendimiento.</p>
+        <ul class="srv-card__lista">
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Migración a la nube</li>
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Refactorización de código</li>
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Integración de APIs</li>
+        </ul>
+      </div>
+
+      <div class="srv-card revelar delay-2">
+        <span class="srv-card__numero">05</span>
+        <div class="srv-card__icono"><i class="bi bi-shield-lock-fill"></i></div>
+        <h3 class="srv-card__titulo">Sistemas financieros y bursátiles</h3>
+        <p class="srv-card__texto">Desarrollo especializado para el sector financiero mexicano: plataformas de trading, gestión de carteras y sistemas de cumplimiento regulatorio.</p>
+        <ul class="srv-card__lista">
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Plataformas bursátiles</li>
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Cumplimiento regulatorio</li>
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Integración con CNBV y BMV</li>
+        </ul>
+      </div>
+
+      <div class="srv-card revelar delay-3">
+        <span class="srv-card__numero">06</span>
+        <div class="srv-card__icono"><i class="bi bi-headset"></i></div>
+        <h3 class="srv-card__titulo">Soporte y mantenimiento</h3>
+        <p class="srv-card__texto">Acompañamiento técnico continuo post-entrega: corrección de bugs, actualizaciones, monitoreo y evolución de tus sistemas a largo plazo.</p>
+        <ul class="srv-card__lista">
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Soporte correctivo y evolutivo</li>
+          <li><i class="bi bi-check2" aria-hidden="true"></i> Monitoreo 24/7</li>
+          <li><i class="bi bi-check2" aria-hidden="true"></i> SLAs garantizados</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
   <main>
     <section class="section__left sp10">
-      <article>
+      <article class="revelar-izq">
         <h2 class="subtitulo">Innovando el desarrollo de software.</h2>
-        <p class="parrafo">En <em>soltec</em> nos destacamos por estar a la vanguardia 
-        de las últimas tecnologías y tendencias en el desarrollo de software. </br></br>
-        Innovamos constantemente en el diseño y la usabilidad para garantizar que cada solución 
-        que desarrollamos no solo sea tecnológicamente avanzada, sino también intuitiva 
-        y satisfactoria para los usuarios. </br></br>
-        En un mundo donde la agilidad es clave, nuestras metodologías de desarrollo de software 
-        son ágiles y flexibles. Adoptamos enfoques modernos que permiten entregas rápidas 
-        y adaptaciones continuas.</p></br>
-        <button id="btnContacto" class="btnContacto">Contáctanos</button>
+        <p class="parrafo">En <em>Soltec</em> nos destacamos por estar a la vanguardia de las últimas tecnologías y tendencias en el desarrollo de software. Innovamos constantemente en el diseño y la usabilidad para garantizar que cada solución que desarrollamos no solo sea tecnológicamente avanzada, sino también intuitiva y satisfactoria para los usuarios. En un mundo donde la agilidad es clave, nuestras metodologías son ágiles y flexibles, con entregas rápidas y adaptaciones continuas.</p>
+        <button class="btnContacto">Contáctanos</button>
       </article>
-      <aside>
-        <div class="widget">
-          <img class="imagen" src="./src/pantalla-con-codigo.jpg" alt="Desarrollo de Software">
-        </div>
+      <aside class="revelar-der">
+        <img class="imagen" src="./src/pantalla-con-codigo.jpg" alt="Pantalla con código de desarrollo de software" loading="lazy">
       </aside>
     </section>
     <div class="s-bar">
       <h3>Nuestra misión: ¡Convertir satisfactoriamente requerimientos en software!</h3>
     </div>
     <div class="s-bar">
-      <img class="coding" src="./src/code-solid.svg" alt="Coding"></img>
-      <h4>¡Siempre a la vanguardia en arquitecturas de desarrollo!</h4>
+      <img class="coding" src="./src/code-solid.svg" alt="Coding">      <h4>¡Siempre a la vanguardia en arquitecturas de desarrollo!</h4>
     </div>  
     <section class="section__right">
-      <aside>
-        <div class="widget">
-          <img class="imagen" src="./src/laptop-codigo.jpg" alt="Desarrollo de Software">
-        </div>
+      <aside class="revelar-izq">
+        <img class="imagen" src="./src/laptop-codigo.jpg" alt="Laptop con código de desarrollo" loading="lazy">
       </aside>
-      <article>
+      <article class="revelar-der">
         <h2 class="subtitulo">Soluciones diseñadas para superar tus expectativas.</h2>
-        <p class="parrafo">En <em>soltec</em> nuestra filosofía se basa en la creencia de 
-          que cada cliente es único, y por lo tanto, nuestras soluciones están meticulosamente 
-          diseñadas para superar tus expectativas en cada nivel. </br></br>
-          No se trata solo de cumplir con tus requisitos; se trata de anticiparnos a tus 
-          necesidades y ofrecerte experiencias que te sorprendan. </br></br>
-          La calidad es la piedra angular de todo lo que hacemos. 
-          Cada solución pasa por rigurosos estándares de calidad para garantizar 
-          que no solo cumple, sino que supera las expectativas. 
-          Nos esforzamos por la excelencia en todos los aspectos, desde la construcción 
-          hasta la entrega y el soporte postventa.</p></br>
-        <button id="btnContacto" class="btnContacto">Contáctanos</button>
+        <p class="parrafo">En <em>Soltec</em> nuestra filosofía se basa en la creencia de que cada cliente es único. Nuestras soluciones están meticulosamente diseñadas para anticiparnos a tus necesidades y ofrecerte experiencias que te sorprendan. La calidad es la piedra angular de todo lo que hacemos — cada entrega pasa por rigurosos estándares antes de llegar a tus manos.</p>
+        <button class="btnContacto">Contáctanos</button>
       </article>
     </section>
     <div class="s-bar">
       <h3>¡Nos preocupamos por tu satisfacción!</h3>
     </div>
     <div class="s-bar">
-      <img class="coding" src="./src/eye-regular.svg" alt="Coding"></img>
-      <h4>¡Soporte técnico y asesoría en todo momento!</h4>
+      <img class="coding" src="./src/eye-regular.svg" alt="Coding">      <h4>¡Soporte técnico y asesoría en todo momento!</h4>
     </div>  
     <section class="section__left">
-      <article>
+      <article class="revelar-izq">
         <h2 class="subtitulo">Desarrollamos tecnología para impulsar tu negocio.</h2>
-        <p class="parrafo">En <em>soltec</em> estamos comprometidos a ser tu socio tecnológico
-        estratégico, impulsando tu negocio hacia el éxito.</br></br>
-        Creemos en la fuerza de la colaboración. Trabajamos codo a codo contigo para comprender 
-        tus desafíos y oportunidades, integrando tus conocimientos empresariales con nuestra 
-        experiencia tecnológica.</br></br>
-        Esta colaboración guía nuestra innovación, asegurando que cada solución sea una respuesta
-        directa a tus necesidades y metas comerciales.</p></br>
-        <button id="btnContacto" class="btnContacto">Contáctanos</button>
+        <p class="parrafo">En <em>Soltec</em> somos tu socio tecnológico estratégico. Trabajamos codo a codo contigo para comprender tus desafíos y oportunidades, integrando tus conocimientos del negocio con nuestra experiencia técnica. Cada solución que construimos es una respuesta directa a tus necesidades y metas comerciales.</p>
+        <button class="btnContacto">Contáctanos</button>
       </article>
-      <aside>
-        <div class="widget">
-          <img class="imagen" src="./src/pantalla-codigo-inspector.jpg" alt="Desarrollo de Software">
-        </div>
+      <aside class="revelar-der">
+        <img class="imagen" src="./src/pantalla-codigo-inspector.jpg" alt="Inspector de código en pantalla" loading="lazy">
       </aside>
     </section>
     <div class="s-bar">
@@ -115,12 +288,13 @@
         <h4 class="contact__title">¡Contáctanos!</h4>
         <form aria-label="Formulario para enviar solicitar información" id="form" class="form" action="https://formspree.io/f/xyyrgeyo" method="post">
           <label for="fname">Nombre Completo:</label>
-          <input class ="name" type="text" id="fname" required placeholder="Nombre Completo" type="text">
-          <label for="email">Correo Electónico</label>
-          <input class="email" type="email" id="email" required placeholder="Correo Electrónico" type="text">
+          <input class="name" type="text" id="fname" name="fname" required placeholder="Nombre Completo">
+          <label for="email">Correo Electrónico</label>
+          <input class="email" type="email" id="email" name="email" required placeholder="Correo Electrónico">
           <label for="message">Mensaje:</label>
           <textarea class="message" id="message" name="message" rows="10" cols="50" placeholder="Escriba su mensaje..."></textarea>
           <input aria-label="Enviar Información del Formulario" class="enviar" type="submit" value="Enviar">
+          <p id="form-msg" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -136,27 +310,19 @@
         </div>
         <div class="box">
           <h2>Empresa</h2>
-          <a href="index.html">
-            <p>Inicio</p>
-          </a>
-          <a href="quienes_somos.html">
-            <p>Quiénes Somos</p>
-          </a>
-          <a href="#">
-            <p>Servicios</p>
-          </a>
-          <a href="#contacto">
-            <p>Contacto</p>
-          </a>
+          <a href="index.html">Inicio</a>
+          <a href="quienes_somos.html">Quiénes Somos</a>
+          <a href="#">Servicios</a>
+          <a href="#contacto">Contacto</a>
         </div>
         <div class="box">
           <h2>Contacto</h2>
-          <p>hola@soltec.mx</p>
+          <a href="mailto:hola@soltec.mx">hola@soltec.mx</a>
           <p>55 43 60 41 40</p>
         </div>
     </div>
     <div class="grupo2">
-        <small>&copy; 2024 <b>Soluciones Tecnológicas</b> - Todos los Derechos Reservados.</small>
+        <small>&copy; 2026 <b>Soluciones Tecnológicas</b> - Todos los Derechos Reservados.</small>
     </div>
   </footer>
 </body>
