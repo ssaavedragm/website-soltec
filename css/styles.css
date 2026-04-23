@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
-
 /* ── Variables ─────────────────────────────────────────── */
 :root {
   --c-primario:    #08496a;
@@ -50,14 +48,16 @@ header {
   justify-content: space-between;
   padding: 0.6rem 1.5rem;
   background-color: transparent;
+  -webkit-backdrop-filter: blur(0px);
   backdrop-filter: blur(0px);
-  transition: background-color var(--transicion), box-shadow var(--transicion), backdrop-filter var(--transicion);
+  transition: background-color var(--transicion), box-shadow var(--transicion), backdrop-filter var(--transicion), -webkit-backdrop-filter var(--transicion);
   z-index: 100;
 }
 
 header.scrolled {
   background-color: rgba(1, 51, 71, 0.97);
   box-shadow: var(--sombra-media);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -567,6 +567,7 @@ header.scrolled {
   border: 1px solid rgba(255,255,255,0.12);
   width: 100%;
   max-width: 480px;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -864,17 +865,20 @@ header.scrolled {
 
 /* ── Separadores clip-path ─────────────────────────────── */
 .stats {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
   padding-bottom: 5rem;
 }
 
 .section__left.sp10 {
+  -webkit-clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
   padding-top: 5rem;
   margin-top: -2rem;
 }
 
 .contact__content {
+  -webkit-clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
   padding-top: 6rem;
 }
@@ -1053,5 +1057,31 @@ header.scrolled {
   .btn-secundario {
     width: 100%;
     text-align: center;
+  }
+}
+
+/* iOS/Safari: background-attachment:fixed no funciona en móvil */
+@media (hover: none) and (pointer: coarse) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
+
+/* Clip-path: desactivar en móvil para evitar contenido cortado */
+@media screen and (max-width: 768px) {
+  .stats {
+    clip-path: none;
+    padding-bottom: 3rem;
+  }
+
+  .section__left.sp10 {
+    clip-path: none;
+    margin-top: 0;
+    padding-top: 3rem;
+  }
+
+  .contact__content {
+    clip-path: none;
+    padding-top: 4rem;
   }
 }
