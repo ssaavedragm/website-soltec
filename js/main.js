@@ -1,27 +1,31 @@
-/* ── Menú móvil ─────────────────────────────────────────── */
-const nav   = document.querySelector("#nav");
-const abrir = document.querySelector("#abrir");
+const nav    = document.querySelector("#nav");
+const abrir  = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
 
 if (abrir)  abrir.addEventListener("click",  () => nav.classList.add("visible"));
 if (cerrar) cerrar.addEventListener("click", () => nav.classList.remove("visible"));
 
-/* ── Header: transparente → sólido al scroll ───────────── */
 const header = document.querySelector("header");
 if (header) {
+    let ticking = false;
     window.addEventListener("scroll", () => {
-        header.classList.toggle("scrolled", window.scrollY > 60);
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                header.classList.toggle("scrolled", window.scrollY > 60);
+                ticking = false;
+            });
+            ticking = true;
+        }
     }, { passive: true });
 }
 
-/* ── Scroll suave al hacer clic en "Contáctanos" ───────── */
+const seccionContacto = document.querySelector("#contacto");
 document.querySelectorAll(".btnContacto").forEach((btn) => {
     btn.addEventListener("click", () => {
-        document.querySelector("#contacto")?.scrollIntoView({ behavior: "smooth" });
+        seccionContacto?.scrollIntoView({ behavior: "smooth" });
     });
 });
 
-/* ── Animaciones de entrada (IntersectionObserver) ─────── */
 const observador = new IntersectionObserver((entradas) => {
     entradas.forEach((entrada) => {
         if (entrada.isIntersecting) {
@@ -35,7 +39,6 @@ document.querySelectorAll(".revelar, .revelar-izq, .revelar-der").forEach((el) =
     observador.observe(el);
 });
 
-/* ── Contador animado en sección stats ─────────────────── */
 function animarContador(el) {
     const objetivo = parseInt(el.dataset.target, 10);
     const duracion = 1800;
@@ -50,31 +53,32 @@ function animarContador(el) {
     requestAnimationFrame(paso);
 }
 
-const observadorStats = new IntersectionObserver((entradas) => {
-    entradas.forEach((entrada) => {
-        if (entrada.isIntersecting) {
-            entrada.target.querySelectorAll(".stats__numero").forEach(animarContador);
-            observadorStats.unobserve(entrada.target);
-        }
-    });
-}, { threshold: 0.4 });
-
 const statsSection = document.querySelector(".stats");
-if (statsSection) observadorStats.observe(statsSection);
+if (statsSection) {
+    const observadorStats = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            if (entrada.isIntersecting) {
+                entrada.target.querySelectorAll(".stats__numero").forEach(animarContador);
+                observadorStats.unobserve(entrada.target);
+            }
+        });
+    }, { threshold: 0.4 });
+    observadorStats.observe(statsSection);
+}
 
-/* ── Formulario de contacto ─────────────────────────────── */
 const form = document.querySelector("#form");
 if (form) form.addEventListener("submit", handleSubmit);
 
 async function handleSubmit(event) {
     event.preventDefault();
-    const submitBtn = this.querySelector(".enviar");
-    const msg       = this.querySelector("#form-msg");
+    const submitBtn    = this.querySelector(".enviar");
+    const msg          = this.querySelector("#form-msg");
+    const textoOriginal = submitBtn.value;
 
-    submitBtn.disabled  = true;
-    submitBtn.value     = "Enviando...";
-    msg.textContent     = "";
-    msg.style.color     = "";
+    submitBtn.disabled = true;
+    submitBtn.value    = "Enviando...";
+    msg.textContent    = "";
+    msg.className      = "";
 
     try {
         const response = await fetch(this.action, {
@@ -86,16 +90,16 @@ async function handleSubmit(event) {
         if (response.ok) {
             this.reset();
             msg.textContent = "¡Gracias por contactarnos! En breve responderemos.";
-            msg.style.color = "#72caf3";
+            msg.className   = "msg--exito";
         } else {
             msg.textContent = "Hubo un error al enviar. Por favor intenta de nuevo.";
-            msg.style.color = "#f08c6a";
+            msg.className   = "msg--error";
         }
     } catch {
         msg.textContent = "No se pudo conectar. Verifica tu conexión e intenta de nuevo.";
-        msg.style.color = "#f08c6a";
+        msg.className   = "msg--error";
     } finally {
         submitBtn.disabled = false;
-        submitBtn.value    = "Enviar";
+        submitBtn.value    = textoOriginal;
     }
 }

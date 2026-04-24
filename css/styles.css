@@ -663,6 +663,9 @@ header.scrolled {
   text-align: center;
 }
 
+#form-msg.msg--exito { color: var(--c-claro); }
+#form-msg.msg--error { color: #f08c6a; }
+
 /* ── Footer ────────────────────────────────────────────── */
 .pie__pagina {
   width: 100%;
@@ -884,37 +887,22 @@ header.scrolled {
 }
 
 /* ── Animaciones de entrada ────────────────────────────── */
-.revelar {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.revelar.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.revelar-izq {
-  opacity: 0;
-  transform: translateX(-40px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.revelar-izq.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
+.revelar,
+.revelar-izq,
 .revelar-der {
   opacity: 0;
-  transform: translateX(40px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
+.revelar     { transform: translateY(40px); }
+.revelar-izq { transform: translateX(-40px); }
+.revelar-der { transform: translateX(40px); }
+
+.revelar.visible,
+.revelar-izq.visible,
 .revelar-der.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translate(0);
 }
 
 /* Delays escalonados */
